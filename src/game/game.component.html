@@ -1,0 +1,13 @@
+<div class="game">
+  <div class="game-board">
+    <board [squares]="history[stepNumber].squares" (onPut)="handleClick($event)"></board>
+  </div>
+  <div class="game-info">
+    <div>{{ status }}</div>
+    <ol>
+      <li *ngFor="let step of moves">
+        <button (click)="jumpTo(step.move)">{{ step.desc }}</button>
+      </li>
+    </ol>
+  </div>
+</div>

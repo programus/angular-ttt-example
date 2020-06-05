@@ -1,0 +1,5 @@
+<div>
+  <div *ngFor="let i of rowIndice" class="board-row">
+    <square *ngFor="let j of colIndice" [value]="squares[i * 3 + j]" (onPut)="putStone(i * 3 + j)"></square>
+  </div>
+</div>
